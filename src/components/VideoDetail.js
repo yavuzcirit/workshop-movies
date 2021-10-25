@@ -1,54 +1,21 @@
-import React,{useState,useEffect,Fragment} from 'react';
+import React from 'react';
 import './VideoDetail.css'
 
-const VideoDetail=({item,selectedBox})=>{
+const VideoDetail = ({ item, onToggle }) => {
 
-	// const [selected, setSelected] = useState([]);
-
-	// const onChange=(event,item)=>{
-	// 	if (event.target.checked) {
- //      setSelected([...selected, item]);
- //    } else {
- //      setSelected((prev) =>
- //        prev.filter((currItem) => currItem.value !== item.value)
- //      );
- //    }
-   
-	// }
-
-	// useEffect(()=>{
-	// 	const changer=()=>{
-	// 		 selectedBox(selected.length)
-	// 	}
-	// 	changer();
-	// },[selected])
-
-
-
-	
-
-	return(
-		<Fragment>
+	return (
+		<>
 			<tr>
-
-			      <td style={{padding:'5px',alignContent:'center'}} data-label="Name"><input value={item.imdbID}  style={{margin:'auto',textAlign:'center'}} type='checkbox'/><img src={item.Poster} style={{height:'70px',width:'50px'}} /></td>
-			      <td data-label="Age" ><a id={item.imdbID} href='#'>{item.Title}</a></td>
-			      <td data-label="Job">{item.Type}</td>
-			      <td data-label="Job">{item.imdbID}</td>
-			      <td data-label="Job">{item.Year}</td>
-
-			      	
-			
-			    </tr>
-
-	
-
-
-
-
-
-
-		</Fragment>)
+				<td style={{ padding: '5px', alignContent: 'center' }} data-label="Name">
+					<input value={item.imdbID} style={{ margin: 'auto', textAlign: 'center' }} type='checkbox' onChange={(e) => onToggle(e, item)} />
+					<img src={item.Poster} alt={item.imdbID} style={{ height: '70px', width: '50px' }} />
+				</td>
+				<td data-label="Age" ><a href='#' id={item.imdbID} >{item.Title}</a></td>
+				<td data-label="Job">{item.Type}</td>
+				<td data-label="Job">{item.imdbID}</td>
+				<td data-label="Job">{item.Year}</td>
+			</tr>
+		</>)
 }
 
 export default VideoDetail
