@@ -24,7 +24,7 @@ const Videos = ({ items, isLoading }) => {
 
 	return isLoading ? (<Spinner />) : <div>
 		<p>{selectedCount ? `${selectedCount} movies selected` : ''}</p>
-		<h1 className="ui blue header">IMDB Movies</h1>
+		<h1 className="ui black header">IMDB Movies</h1>
 		<table className="ui celled table">
 			<thead>
 				<tr>
