@@ -33,6 +33,9 @@ const Videos = ({ items, isLoading }) => {
 					<th>Type</th>
 					<th>ID</th>
 					<th>Year</th>
+					<th>Detail</th>
+					
+
 				</tr>
 			</thead>
 			<tbody>

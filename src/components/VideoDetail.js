@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalEx from './ModalEx'
 import './VideoDetail.css'
 
 const VideoDetail = ({ item, onToggle }) => {
@@ -18,6 +19,8 @@ const VideoDetail = ({ item, onToggle }) => {
 				<td data-label="Job">{item.Type}</td>
 				<td data-label="Job">{item.imdbID}</td>
 				<td data-label="Job">{item.Year}</td>
+				<td data-label="Job"><ModalEx item={item}/></td>
+
 			</tr>
 		</>)
 }
