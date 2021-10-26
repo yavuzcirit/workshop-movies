@@ -9,7 +9,7 @@ function ModalEx({item}) {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>Details</Button>}
+      trigger={<Button>View</Button>}
     >
       <Modal.Header>{item.Title}</Modal.Header>
       <Modal.Content image>
