@@ -1,21 +1,22 @@
 
 span {
 	color: red;
+
 }
 
 span:hover {
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 18px;
 
 }
 
 p {
 	
-	
+	margin: 10px;
 	font-style: italic;
 }
 
 p:hover {
 
-	color: red;
+	text-decoration: underline;
 }

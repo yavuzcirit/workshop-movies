@@ -43,6 +43,12 @@ console.log(term)
   <button className="dropbtn" onClick={myFunction}>Sort By Years
   </button>
   <div className="dropdown-content" id="myDropdown">
+    <a id='2012' href="#2012" onClick={(item)=>setTerm(item.target.innerHTML)}>2012</a>
+    <a id='2013' href="#2013" onClick={(item)=>setTerm(item.target.innerHTML)}>2013</a>
+    <a id='2014' href="#2014" onClick={(item)=>setTerm(item.target.innerHTML)}>2014</a>
+    <a id='2015' href="#2015" onClick={(item)=>setTerm(item.target.innerHTML)}>2015</a>
+    <a id='2016' href="#2016" onClick={(item)=>setTerm(item.target.innerHTML)}>2016</a>
+
     <a id='2017' href="#2017" onClick={(item)=>setTerm(item.target.innerHTML)}>2017</a>
     <a id='2018' href="#2018" onClick={(item)=>setTerm(item.target.innerHTML)}>2018</a>
     <a id='2019' href="#2019" onClick={(item)=>setTerm(item.target.innerHTML)}>2019</a>

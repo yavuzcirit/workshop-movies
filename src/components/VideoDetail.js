@@ -3,6 +3,10 @@ import './VideoDetail.css'
 
 const VideoDetail = ({ item, onToggle }) => {
 
+
+
+
+
 	return (
 		<>
 			<tr>
@@ -10,7 +14,7 @@ const VideoDetail = ({ item, onToggle }) => {
 					<input value={item.imdbID} style={{ margin: 'auto', textAlign: 'center' }} type='checkbox' onChange={(e) => onToggle(e, item)} />
 					<img src={item.Poster} alt={item.imdbID} style={{ height: '70px', width: '50px' }} />
 				</td>
-				<td data-label="Age" ><a href='#' id={item.imdbID} >{item.Title}</a></td>
+				<td data-label="Age" ><a  href='#' id={item.imdbID} >{item.Title}</a></td>
 				<td data-label="Job">{item.Type}</td>
 				<td data-label="Job">{item.imdbID}</td>
 				<td data-label="Job">{item.Year}</td>
