@@ -1,0 +1,21 @@
+
+span {
+	color: red;
+}
+
+span:hover {
+	cursor: pointer;
+	font-size: 20px;
+
+}
+
+p {
+	
+	
+	font-style: italic;
+}
+
+p:hover {
+
+	color: red;
+}

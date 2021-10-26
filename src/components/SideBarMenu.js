@@ -1,22 +1,20 @@
 import React,{useState,useEffect} from 'react';
-import axios from 'axios'
+
 import './SideBarMenu.css'
-import Videos from './Videos'
 
 
 
-const SideBarMenu=()=>{
+
+const SideBarMenu=({takeYear})=>{
 
 
 	const [term,setTerm]=useState('')
 
   
 
-	const onClickHandler=(item)=>{
-		
-		setTerm(item)
-		console.log(term)
-	}
+	useEffect(()=>{
+		takeYear(term)
+	},[term])
 
 	
 
@@ -33,6 +31,9 @@ const SideBarMenu=()=>{
   }
 }
 
+
+console.log(term)
+
 	return (
 		<div>
 
@@ -42,11 +43,11 @@ const SideBarMenu=()=>{
   <button className="dropbtn" onClick={myFunction}>Sort By Years
   </button>
   <div className="dropdown-content" id="myDropdown">
-    <a id='2017' href="#2017" onClick={onClickHandler}>2017 Films</a>
-    <a id='2018' href="#2018" onClick={onClickHandler}>2018 Films</a>
-    <a id='2019' href="#2019" onClick={onClickHandler}>2019 Films</a>
-    <a id='2020' href="#2020" onClick={onClickHandler}>2020 Films</a>
-    <a id='2021' href="#2021" onClick={onClickHandler}>2021 Films</a>
+    <a id='2017' href="#2017" onClick={(item)=>setTerm(item.target.innerHTML)}>2017</a>
+    <a id='2018' href="#2018" onClick={(item)=>setTerm(item.target.innerHTML)}>2018</a>
+    <a id='2019' href="#2019" onClick={(item)=>setTerm(item.target.innerHTML)}>2019</a>
+    <a id='2020' href="#2020" onClick={(item)=>setTerm(item.target.innerHTML)}>2020</a>
+    <a id='2021' href="#2021" onClick={(item)=>setTerm(item.target.innerHTML)}>2021</a>
 
   </div>
   </div> 
